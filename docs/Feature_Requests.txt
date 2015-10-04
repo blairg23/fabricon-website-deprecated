@@ -1,0 +1,19 @@
+1. Product photo gallery (each photo or category has a gallery to slide through).
+2. Update menu area (larger fonts, more padding, spread across screen)
+3. Add new popout menu area on left side of screen (jquery popout) (maybe just icons with tooltips)
+4. Update logo area (thinner logo [maybe 50% of current size], more stretch across screen, different fonts/colors, add motto) Try several designs and showcase each design separately. Possibly have black band w/ silver logo and gold lettering (add motto beneath lettering)
+5. When a user clicks on a category or navigates to a content area, the template will be a large centered gallery photo to quickly scroll through content, as well as a blurb about that content area.
+6. Populate "about fabricon" area.
+7. Populate "contact us" area with google maps, contact info, email form
+8. **Make left/right side of image in "gallery" clickable for navigation (instead of having to click on arrow specifically)** --> Conflicts with clicking image for page navigation.
+9. Add Fabricon icon to upper-left of navigation bar.
+10. Hide email from spambots (websitecodetutorials.com)
+11. Style sheet switcher (websitecodetutorials.com)
+12. Background image idea: play with fabric weaves (either in logo area only or in entire background)
+13. Fonts: Arial? Play around with different fonts.
+14. Front page and content pages: add more padding between thumbnail pictures, also change out placeholders for real content pictures (HD images)
+15. Contact Us: Google maps, contact info, email us form
+16. About Fabricon: Add content
+17. Resources: Add content
+18. Add social networking features: facebook, linkedin, and google+
+19. Horizontal dividers between ALL menu items (maybe talk about this more with the customer)

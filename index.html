@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />	
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
 		<link rel="stylesheet" type="text/css" href="css/fabricon.css" />
 
 		<script type="text/javascript" src="./js/libs/jquery-1.11.1.min.js"></script>
@@ -16,17 +17,24 @@
 		<script type="text/javascript" src="./js/libs/angular.min.js"></script>
 		<script type="text/javascript" src="./js/libs/bootstrap.min.js"></script>
 		<script type="text/javascript" src="./js/libs/jquery.lightbox.js"></script>
+		<script src="./bower_components/slick-carousel/slick/slick.js"></script>
+		<script src="./bower_components/angular-slick/dist/slick.js"></script>	
 		<script type="text/javascript" src="./js/fabricon.js"></script>
 	</head>
 
-	<body class="container">
+	<body>
 	    <!--  Navigation Container  -->
 	    <navigation-bar></navigation-bar>
 
-	    <footer>
-		<h1><a href="index.html">view1</a> | <a href="view2.html">view2</a> | <a href="view3.html">view3</a></h1> <br />
-		<h6 class="nolinks">Copyright © <script>document.write(new Date().getFullYear());</script> Fabricon, LLC. All Rights Reserved | 806 West Spruce, Missoula, MT 59801 | <a href="tel:+14067288300">(406) 728-8300</a> | <a href="mailto:fabricon@montana.com">fabricon@montana.com</a> | Designed by <a href="http://blairgemmer.com">Blair Gemmer</a></h6>
-		</footer>
+		<div class="container">
+			<!-- Front Page -->
+			<front-page-content ng-show="tab.isSet('front-page-content')"></front-page-content>
+
+		    <footer>
+			<!-- <h1><a href="index.html">view1</a> | <a href="view2.html">view2</a> | <a href="view3.html">view3</a></h1> <br /> -->
+			<h6 class="nolinks">Copyright © <script>document.write(new Date().getFullYear());</script> Fabricon, LLC. All Rights Reserved | 806 West Spruce, Missoula, MT 59801 | <a href="tel:+14067288300">(406) 728-8300</a> | <a href="mailto:fabricon@montana.com">fabricon@montana.com</a> | Designed by <a href="http://blairgemmer.com">Blair Gemmer</a></h6>
+			</footer>
+		</div>
 	</body>
 </html>
 

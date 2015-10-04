@@ -1,5 +1,5 @@
 (function () {
-	var app = angular.module('fabricon', []);
+	var app = angular.module('fabricon', ['slick']);
 	
   app.controller('StoreController', function(){
     this.products = products;
@@ -19,6 +19,19 @@
     };
   });
   //- FRONT PAGE
+
+  //+ Slick Slider
+  app.directive('slickSlider',function($timeout){
+    return {
+     restrict: 'A',
+     link: function(scope,element,attrs) {
+       $timeout(function() {
+           $(element).slick(scope.$eval(attrs.slickSlider)); 
+       });
+     }
+    }
+  }); 
+  //- Slick Slider
 
   //+ AWNINGS
   app.directive("awningsAndCanopies", function() {

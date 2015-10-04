@@ -1,0 +1,4 @@
+1. Fix icon coloration so next/previous in gallery is more noticeable (right now, they are difficult to see on black images) [AESTHETIC].
+2. Fix Back/Forward arrows in Browser when navigating site [MINOR].
+3. Slick galleries do not load because page never reloads [MAJOR].
+4. Arrows for slick galleries not vertically aligned [AESTHETIC].
