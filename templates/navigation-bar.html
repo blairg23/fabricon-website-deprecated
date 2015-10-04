@@ -1,17 +1,18 @@
 	<!--  Navigation Container  -->
 	<nav class="navbar navbar-default" role="navigation" ng-show=true>
+    	<div class="navbar-header">
+	    	<a class="navbar-brand" href="#">
+	        	<img class="centered" alt="Brand" src="img/logos/light_on_dark.jpg" style="height:35%; width:35%;" />
+	      	</a>
+	    </div>
 		<div class="container-fluid navbar-right">
-		    <div class="navbar-header">
-		    	<a class="navbar-brand" href="#">
-		        	<img class="centered" alt="Brand" src="img/logo.gif" />
-		      	</a>
-		    </div>
+
 		    <div class="fixed_centered">
 			    <ul class="nav navbar-nav" style="vertical-align:middle">
-	                <li ng-class="{ active:tab.isSet('front-page-content') }">
+	                <li class='navbar-button' ng-class="{ active:tab.isSet('front-page-content') }">
 	                	<a href ng-click="tab.setTab('front-page-content')">Home</a>
 	                </li>
-	        		<li class="dropdown">
+	        		<li class="navbar-button dropdown">
 			        	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
 		        		<ul class="dropdown-menu" role="menu">
 			          		<li ng-class="{ active:tab.isSet('awnings-and-canopies') }" class="dropdown-submenu"><a href ng-click="tab.setTab('awnings-and-canopies')" class="dropdown-toggle" data-toggle="dropdown">Awnings & Canopies</a>
@@ -74,16 +75,15 @@
 		                    </li>      
 				        </ul>
 				    </li>
-			        <li ng-class="{ active:tab.isSet('about-fabricon') }"><a href ng-click="tab.setTab('about-fabricon')">About Fabricon</a></li>
-					<li ng-class="{ active:tab.isSet('resources') }"><a href ng-click="tab.setTab('resources')">Resources</a></li>
-					<li ng-class="{ active:tab.isSet('contact-us') }"><a href ng-click="tab.setTab('contact-us')">Contact Us</a></li>
+			        <li class='navbar-button' ng-class="{ active:tab.isSet('about-fabricon') }"><a href ng-click="tab.setTab('about-fabricon')">About Fabricon</a></li>
+					<li class='navbar-button' ng-class="{ active:tab.isSet('resources') }"><a href ng-click="tab.setTab('resources')">Resources</a></li>
+					<li class='navbar-button' ng-class="{ active:tab.isSet('contact-us') }"><a href ng-click="tab.setTab('contact-us')">Contact Us</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 <div>
-	<!-- Front Page -->
-	<front-page-content ng-show="tab.isSet('front-page-content')"></front-page-content>
+	
 
 	<!-- custom
  Pages -->

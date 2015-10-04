@@ -3,12 +3,43 @@
     <div class="row" ng-repeat="products in store.products">
 		    <div class="col-md-4" ng-repeat="product in products">
             <!-- Image Gallery  -->
-        	<ul>
-          		<li class="small-image pull-left thumbnail" ng-class="{ active:tab.isSet({{product.link}}) }">
-          			<h3>{{product.name}}</h3><a href ng-click="tab.setTab(product.link)">
-          			<img ng-src="{{product.images.thumbnail}}" style="height:{{product.size.height}}em; width: {{product.size.width}}em" /></a>
-          		</li>
-          	</ul>
+<!--         	<ul>
+          		<li class="small-image pull-left thumbnail" ng-class="{ active:tab.isSet({{product.link}}) }">  -->                               
+                
+           		<div class="navigation-gallery" style="width:33%; float:left" slick-slider="{initOnload:true, fade: true, dots:true, infinite:true, arrows:true, draggable:true, speed:800, slidesToShow:1}">
+
+                    <a href class="nolinks" ng-click="tab.setTab(product.link)">
+                        <h3>{{product.name}}</h3>  
+                  	</a>       
+                  	<div>
+                  		<a href class="nolinks" ng-click="tab.setTab(product.link)">
+    	          			<img class='centered' ng-src="{{product.images.thumbnail}}" style="height:{{product.size.height}}em; width: {{product.size.width}}em;" />    	
+                 		</a>
+                  	</div>
+                  	<div>
+                  		<a href class="nolinks" ng-click="tab.setTab(product.link)">
+    	          			<img class='centered' ng-src="{{product.images.thumbnail}}" style="height:{{product.size.height}}em; width: {{product.size.width}}em;" />    	
+                 		</a>
+                  	</div>
+                  	<div>
+                  		<a href class="nolinks" ng-click="tab.setTab(product.link)">
+    	          			<img class='centered' ng-src="{{product.images.thumbnail}}" style="height:{{product.size.height}}em; width: {{product.size.width}}em;" />    	
+                 		</a>
+                  	</div>
+                  	<div>
+                  		<a href class="nolinks" ng-click="tab.setTab(product.link)">
+    	          			<img class='centered' ng-src="{{product.images.thumbnail}}" style="height:{{product.size.height}}em; width: {{product.size.width}}em;" />    	
+                 		</a>
+                  	</div>
+                  	<div>
+                  		<a href class="nolinks" ng-click="tab.setTab(product.link)">
+    	          			<img class='centered' ng-src="{{product.images.thumbnail}}" style="height:{{product.size.height}}em; width: {{product.size.width}}em;" />    	
+                 		</a>
+                    </div>
+                  
+                </div>
+<!--           		</li>
+          	</ul> -->
         </div>
     </div>
 </div>

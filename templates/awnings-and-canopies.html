@@ -1,25 +1,53 @@
-<!--  custom
+<!--  product
  Container  -->
 <div class="products" ng-controller="StoreController as store"> 
 	<h2>Awnings & Canopies</h2>
-	<blockquote>{{custom
-.description}}</blockquote>   
-    <div class="row" ng-repeat="awnings in store.awnings">
-		    <div class="col-md-4" ng-repeat="custom
- in awnings">
-            <!-- Image Gallery  -->
-        	<ul>
-          		<li class="small-image pull-left thumbnail" ng-class="{ active:tab.isSet({{custom
-.link}}) }">
-          			<h3>{{custom
-.name}}</h3><a href ng-click="tab.setTab(custom
-.link)">
-          			<img ng-src="{{custom
-.images.thumbnail}}" style="height:{{custom
-.size.height}}em; width: {{custom
-.size.width}}em" /></a>
-          		</li>
-          	</ul>
+	<!-- <blockquote>{{product.description}}</blockquote>    -->
+  <div class="row" ng-repeat="awnings in store.awnings">
+	  <div class="col-md-4" ng-repeat="product in awnings">
+        <!-- Image Gallery  -->
+    	<ul>
+    		<li class="small-image pull-left thumbnail" ng-class="{ active:tab.isSet({{product.link}}) }">
+          <a class="nolinks" href ng-click="tab.setTab(product.link)">
+      			<h3 class="nolinks">{{product.name}}</h3>
+      			<img ng-src="{{product.images.thumbnail}}" style="height:{{product.size.height}}em; width: {{product.size.width}}em" />
+          </a>
+    		</li>
+    	</ul>
+
+<!--       <div class="navigation-gallery" style="width:33%; float:left" slick-slider="{initOnload:true, fade:true, dots:true, infinite:true, arrows:true, draggable:true, speed:800, slidesToShow:1, initialSlide:0}">
+        <a href class="nolinks" ng-click="tab.setTab(product.link)">
+            <h3>{{product.name}}</h3>  
+        </a>       
+        <div>
+          <a href class="nolinks" ng-click="tab.setTab(product.link)">
+          <img class='centered' ng-src="{{product.images.thumbnail}}" style="height:{{product.size.height}}em; width: {{product.size.width}}em;" />     
+        </a>
         </div>
+        <div>
+          <a href class="nolinks" ng-click="tab.setTab(product.link)">
+          <img class='centered' ng-src="{{product.images.thumbnail}}" style="height:{{product.size.height}}em; width: {{product.size.width}}em;" />     
+        </a>
+        </div>
+        <div>
+          <a href class="nolinks" ng-click="tab.setTab(product.link)">
+          <img class='centered' ng-src="{{product.images.thumbnail}}" style="height:{{product.size.height}}em; width: {{product.size.width}}em;" />     
+        </a>
+        </div>
+        <div>
+          <a href class="nolinks" ng-click="tab.setTab(product.link)">
+          <img class='centered' ng-src="{{product.images.thumbnail}}" style="height:{{product.size.height}}em; width: {{product.size.width}}em;" />     
+        </a>
+        </div>
+        <div>
+          <a href class="nolinks" ng-click="tab.setTab(product.link)">
+          <img class='centered' ng-src="{{product.images.thumbnail}}" style="height:{{product.size.height}}em; width: {{product.size.width}}em;" />     
+        </a>
+        </div> -->
+      
     </div>
+    
+
+    </div>
+  </div>
 </div>
