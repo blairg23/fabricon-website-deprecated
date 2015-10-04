@@ -1,20 +1,64 @@
-	<!--  Navigation Container  -->
-	<nav class="navbar navbar-default" role="navigation" ng-show=true>
-    	<div class="navbar-header">
-	    	<a class="navbar-brand" href ng-click="tab.setTab('front-page-content')">
-	        	<img class="centered" alt="Brand" src="img/logos/light_on_dark.jpg" style="height:35%; width:35%;" />
-	      	</a>
-	    </div>
-		<div class="container-fluid navbar-right">
-		    <div class="fixed_centered">
-		    	<a href ng-click="tab.setTab('front-page-content')">
-			    	<img class="navbar-button" alt="Brand" src="img/logos/mt_logo_lg.png" style="height:5%; width:5%" />
+<!--  Navigation Container  -->
+<nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation" ng-show=true>
+	<div class="container">
+		<div class="navbar-header">
+          	<div class="fabricon-brand-motto">
+				<a href="#/home">	
+					<img class="fabricon-brand" alt="Brand" src="img/logos/mt_logo_lg_transparent_all.png" />
+				</a>
+				<img class="fabricon-motto" alt="Brand" src="img/logos/fabricon_motto_white.png" />
+				<img class="made-in-montana-logo" alt="Brand" src="img/made_in_montana.png" />
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+	            <li class="active"><a href="#">Home</a></li>
+	            <li class="divider"></li>
+	            <li><a href="#about">About</a></li>
+	            <li class="divider"></li>
+	            <li><a href="#contact">Contact</a></li>
+	            <li class="divider"></li>
+	            <li class="dropdown">
+	              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+	              <ul class="dropdown-menu" role="menu">
+	                <li><a href="#">Action</a></li>
+	                <li><a href="#">Another action</a></li>
+	                <li><a href="#">Something else here</a></li>
+	                <li class="divider"></li>
+	                <li class="dropdown-header">Nav header</li>
+	                <li><a href="#">Separated link</a></li>
+	                <li><a href="#">One more separated link</a></li>
+	              </ul>
+	            </li>
+	          </ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<!-- 			<div class="fabricon-brand-logo">
+		    	<a class="navbar-brand pull-left" href ng-click="tab.setTab('front-page-content')">Fabricon		    	
+		        	<img alt="Brand" src="img/logos/mt_logo_edits/mt_logo_lg_transparent_all.png" />
+		      	</a>
+	      	</div>
+
+			<div class="fabricon-navbar-motto">Fabricon Does Stuff.
+				<img alt="Brand" src="img/logos/fabricon_motto_white.png" />
+			</div> -->
+
+	      	<!-- <div class="container-fluid navbar-right">
+		    	<a href ng-click="tab.setTab('front-page-content')">			    	
 			    </a>
 			    <ul class="nav navbar-nav" style="vertical-align:middle">			
-	                <li class="navbar-button" ng-class="{ active:tab.isSet('front-page-content') }">
+	                <li ng-class="{ active:tab.isSet('front-page-content') }">
 	                	<a href ng-click="tab.setTab('front-page-content')">Home</a>
 	                </li>
-	        		<li class="navbar-button dropdown">
+	        		<li class="dropdown">
 			        	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
 		        		<ul class="dropdown-menu" role="menu">
 			          		<li ng-class="{ active:tab.isSet('awnings-and-canopies') }" class="dropdown-submenu"><a href ng-click="tab.setTab('awnings-and-canopies')" class="dropdown-toggle" data-toggle="dropdown">Awnings & Canopies</a>
@@ -94,80 +138,12 @@
 		                    </li>      
 				        </ul>
 				    </li>
-			        <li class='navbar-button' ng-class="{ active:tab.isSet('about-fabricon') }"><a href ng-click="tab.setTab('about-fabricon')">About Fabricon</a></li>
-					<li class='navbar-button' ng-class="{ active:tab.isSet('resources') }"><a href ng-click="tab.setTab('resources')">Resources</a></li>
-					<li class='navbar-button' ng-class="{ active:tab.isSet('contact-us') }"><a href ng-click="tab.setTab('contact-us')">Contact Us</a></li>
+			        <li class='fabricon-navbar-button' ng-class="{ active:tab.isSet('about-fabricon') }"><a href ng-click="tab.setTab('about-fabricon')">About Fabricon</a></li>
+					<li class='fabricon-navbar-button' ng-class="{ active:tab.isSet('resources') }"><a href ng-click="tab.setTab('resources')">Resources</a></li>
+					<li class='fabricon-navbar-button' ng-class="{ active:tab.isSet('contact-us') }"><a href ng-click="tab.setTab('contact-us')">Contact Us</a></li>
 				</ul>
 			</div>
 		</div>
-	</nav>
-<div>
-	
+</nav>
+ -->
 
-	<!-- custom
- Pages -->
-
-	<!-- Awnings & Canopies -->
-	<awnings-and-canopies ng-show="tab.isSet('awnings-and-canopies')"></awnings-and-canopies>
-		<commercial-awnings ng-show="tab.isSet('commercial-awnings')"></commercial-awnings>
-		<deployable-awnings ng-show="tab.isSet('deployable-awnings')"></deployable-awnings>
-		<designs-awnings ng-show="tab.isSet('designs-awnings')"></designs-awnings>
-		<fabrics-awnings ng-show="tab.isSet('fabrics-awnings')"></fabrics-awnings>
-		<graphics-awnings ng-show="tab.isSet('graphics-awnings')"></graphics-awnings>
-		<residential-awnings ng-show="tab.isSet('residential-awnings')"></residential-awnings>
-		<valances-awnings ng-show="tab.isSet('valances-awnings')"></valances-awnings>
-
-
-	<!-- Curtains & Screens -->
-	<curtains-and-screens ng-show="tab.isSet('curtains-and-screens')"></curtains-and-screens>
-		<enclosures-curtains ng-show="tab.isSet('enclosures-curtains')"></enclosures-curtains>	
-		<sun-screens-curtains ng-show="tab.isSet('sun-screens-curtains')"></sun-screens-curtains>
-
-	
-	<!-- Fabrics -->
-	<fabrics ng-show="tab.isSet('fabrics')"></fabrics>
-		<natural-fabrics ng-show="tab.isSet('natural-fabrics')"></natural-fabrics>
-		<synthetic-fabrics ng-show="tab.isSet('synthetic-fabrics')"></synthetic-fabrics>
-
-
-	<!-- Fabric Structures -->
-	<fabric-structures ng-show="tab.isSet('fabric-structures')"></fabric-structures>
-		<frame-supported-fabric-structures ng-show="tab.isSet('frame-supported-fabric-structures')"></frame-supported-fabric-structures>
-		<shade-sails-fabric-structures ng-show="tab.isSet('shade-sails-fabric-structures')"></shade-sails-fabric-structures>
-		<tensile-fabric-structures ng-show="tab.isSet('tensile-fabric-structures')"></tensile-fabric-structures>
-		<deployable-fabric-structures ng-show="tab.isSet('deployable-fabric-structures')"></deployable-fabric-structures>
-		<!-- Deployable -->
-			<tents-deployable ng-show="tab.isSet('tents-deployable')"></tents-deployable>
-			<tipis-deployable ng-show="tab.isSet('tipis-deployable')"></tipis-deployable>
-			<custom-deployable ng-show="tab.isSet('custom-deployable')"></custom-deployable>
-
-
-	<!-- Vertical Roller Screens -->
-	<vertical-roller-screens ng-show="tab.isSet('vertical-roller-screens')"></vertical-roller-screens>
-
-
-	<!-- Custom Products -->
-	<custom-products ng-show="tab.isSet('custom-products')"></custom-products>
-		<agricultural-custom ng-show="tab.isSet('agricultural-custom')"></agricultural-custom>
-		<fabrics-custom ng-show="tab.isSet('fabrics-custom')"></fabrics-custom>
-		<recreational-custom ng-show="tab.isSet('recreational-custom')"></recreational-custom>
-		
-
-	<!-- Consulting -->
-	<consulting ng-show="tab.isSet('consulting')"></consulting>
-		<codes-consulting ng-show="tab.isSet('codes-consulting')"></codes-consulting>
-		<design-consulting ng-show="tab.isSet('design-consulting')"></design-consulting>
-		<engineering-consulting ng-show="tab.isSet('engineering-consulting')"></engineering-consulting>	
-
-
-	<!-- About Fabricon -->
-	<about-fabricon ng-show="tab.isSet('about-fabricon')"></about-fabricon>
-
-
-	<!-- Resources -->
-	<resources ng-show="tab.isSet('resources')"></resources>
-
-
-	<!-- Contact Us -->
-	<contact-us ng-show="tab.isSet('contact-us')"></contact-us>
-</div>

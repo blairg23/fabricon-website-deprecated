@@ -1,19 +1,73 @@
 (function () {
 	var app = angular.module('fabricon', [
-    // 'ngRoute',
-    // 'fabriconControllers'
-    'slick'
+    'ui.bootstrap',
+    'ngRoute',
+    'fabriconControllers'
   ]);
 	
-  app.controller('StoreController', function(){
-    this.products = products;
-    this.awnings = awnings;
-    this.curtains = curtains;
-    this.fabrics = fabrics;
-    this.fabricStructures = fabricStructures;
-    this.verticalRollers = verticalRollers;
-    this.customProducts = customProducts;    
-	});
+  app.config(['$routeProvider', 
+    function($routeProvider) {
+        $routeProvider.
+            when('/home', {
+                templateUrl: './templates/front-page-content.html',
+                controller: 'CategoriesController'
+            }).
+            when('/:categoryName/:categoryID', {
+                templateUrl: './templates/category-content.html',
+                controller: 'CategoryController'
+            }).
+            when('/:categoryName/:categoryID/:subcategoryName/:subcategoryID', {
+                templateUrl: './templates/subcategory-content.html',
+                controller: 'SubCategoryController'
+            }).
+            when('/:categoryName/:categoryID/:subcategoryName/:subcategoryID/:productName/:productID', {
+                templateUrl: './templates/subcategory-product-content.html',
+                controller: 'SubCategoryProductController'
+            }).
+            when('/:categoryName/:categoryID/:subcategoryName/:subcategoryID/:subsubcategoryName/:subsubcategoryID', {
+                templateUrl: './templates/subsubcategory-content.html',
+                controller: 'SubSubCategoryController'
+            }).
+            when('/:categoryName/:categoryID/:subcategoryName/:subcategoryID/:subsubcategoryName/subsubcategoryID/:productName/:productID', {
+                templateUrl: './templates/subsubcategory-product-content.html',
+                controller: 'SubSubCategoryProductController'
+            }).
+            otherwise({
+                redirectTo: '/home'
+            });
+    }
+  ]);
+
+ //  app.controller('StoreController', function(){
+ //    this.products = products;
+ //    this.awnings = awnings;
+ //    this.curtains = curtains;
+ //    this.fabrics = fabrics;
+ //    this.fabricStructures = fabricStructures;
+ //    this.verticalRollers = verticalRollers;
+ //    this.customProducts = customProducts;    
+	// });
+
+  //+ NAVIGATION BAR
+  app.directive("navigationBar", function() {
+    return {
+      restrict: "E",
+      templateUrl: "./templates/navigation-bar.html"
+      // controller: function() {
+      //   this.tab = "front-page-content";
+
+      //   this.isSet = function(checkTab) {
+      //     return this.tab === checkTab;
+      //   };
+
+      //   this.setTab = function(activeTab) {
+      //     this.tab = activeTab;
+      //   };
+      // },
+      // controllerAs: "tab"
+    };
+  });
+  //- NAVIGATION BAR
 
   //+ FRONT PAGE
   app.directive("frontPageContent", function() {
@@ -24,18 +78,14 @@
   });
   //- FRONT PAGE
 
-  //+ Slick Slider
-  app.directive('slickSlider',function($timeout){
+  //+ CONTENT PAGES
+  app.directive("contentPages", function() {
     return {
-     restrict: 'A',
-     link: function(scope,element,attrs) {
-       $timeout(function() {
-           $(element).slick(scope.$eval(attrs.slickSlider)); 
-       });
-     }
-    }
-  }); 
-  //- Slick Slider
+      restrict:"E",
+      templateUrl: "./templates/content-pages.html"
+    };
+  });
+  //- CONTENT PAGES
 
   //+ AWNINGS
   app.directive("awningsAndCanopies", function() {
@@ -296,233 +346,219 @@
     };
   });  
   //- Contact Us
-  app.directive("navigationBar", function() {
-    return {
-      restrict: "E",
-      templateUrl: "./templates/navigation-bar.html",
-      controller: function() {
-        this.tab = "front-page-content";
 
-        this.isSet = function(checkTab) {
-          return this.tab === checkTab;
-        };
 
-        this.setTab = function(activeTab) {
-          this.tab = activeTab;
-        };
-      },
-      controllerAs: "tab"
-    };
-  });
+  // var products = [
+  //   [{
+  //     name: 'Awnings & Canopies', 
+  //     size: {width: 100, height: 100},
+  //     link: 'awnings-and-canopies',     
+  //     images: {
+  //       thumbnails: [
+  //         {image: "img/awnings_canopies/60_index_awning.jpg"},
+  //         {image: "img/fabrics/60_index_fabric.jpg"},
+  //         {image: "img/fabric_structures/90_tensile_cc.jpg"},
+  //         {image: "img/custom_products/full_custom_3.jpg"},
+  //         {image: "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
+  //       ]
+  //     }
+  //   },
+  //   {
+  //     name: 'Curtains & Screens',
+  //     size: {width: 100, height: 100},      
+  //     link: 'curtains-and-screens',
+  //     images: {
+  //       thumbnails: [
+  //         {image: "img/fabrics/60_index_fabric.jpg"},
+  //         {image: "img/awnings_canopies/60_index_awning.jpg"},
+  //         {image: "img/fabrics/60_index_fabric.jpg"},
+  //         {image: "img/fabric_structures/90_tensile_cc.jpg"},
+  //         {image: "img/custom_products/full_custom_3.jpg"},
+  //         {image: "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
+  //       ]
+  //     }
+  //   },      
+  //   {
+  //     name: 'Fabrics',
+  //     size: {width: 100, height: 100},
+  //     link: 'fabrics',
+  //     images: {
+  //       thumbnails: [
+  //         {image: "img/fabrics/60_index_fabric.jpg"},
+  //         {image: "img/fabric_structures/90_tensile_cc.jpg"},
+  //         {image: "img/custom_products/full_custom_3.jpg"},
+  //         {image: "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
+  //       ]
+  //     }
+  //   }],
+  //   [{
+  //     name: 'Fabric Structures',
+  //     size: {width: 100, height: 100},
+  //     link: 'fabric-structures',
+  //     images: {
+  //       thumbnails: [
+  //         {image: "img/fabric_structures/90_tensile_cc.jpg"},
+  //         {image: "img/custom_products/full_custom_3.jpg"},
+  //         {image: "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
+  //       ]
+  //     }
+  //   },          
+  //   {
+  //     name: 'Vertical Roller Screens',
+  //     size: {width: 100, height: 100},
+  //     link: 'vertical-roller-screens',      
+  //     images: {
+  //       thumbnails: [
+  //         {image: "img/vertical_roller_screens/full_awning_chinese_2.jpg"},
+  //         {image: "img/custom_products/full_custom_3.jpg"},
+  //         {image: "img/fabric_structures/90_tensile_cc.jpg"}
+  //       ]
+  //     }
+  //   },
+  //   {
+  //     name: 'Custom Products',
+  //     size: {width: 100, height: 100},
+  //     link: 'custom-products',
+  //     images: {
+  //       thumbnails: [
+  //         {image: "img/custom_products/full_custom_3.jpg"},
+  //         {image: "img/fabric_structures/90_tensile_cc.jpg"},
+  //         {image: "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
+  //       ]
+  //     }
+  //   }]
+  // ]; 
 
-  app.directive("navigationBarDark", function() {
-    return {
-      restrict: "E",
-      templateUrl: "./templates/navigation-bar-dark.html",
-      controller: function() {
-        this.tab = "front-page-content";
+  // var awnings = [
+  //   [{
+  //     name: 'Commercial', 
+  //     size: {width: 25, height: 25},
+  //     link: 'commercial-awnings',
+  //     images: {thumbnail: "img/awnings_canopies/60_index_awning.jpg"}
+  //   },
+  //   {
+  //     name: 'Deployable',
+  //     size: {width: 25, height: 25},      
+  //     link: 'deployable-awnings',
+  //     images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
+  //   },      
+  //   {
+  //     name: 'Designs',
+  //     size: {width: 25, height: 25},
+  //     link: 'designs-awnings',
+  //     images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
+  //   }],
+  //   [{
+  //     name: 'Fabrics',
+  //     size: {width: 25, height: 25},
+  //     link: 'fabrics-awnings',
+  //     images: {thumbnail: "img/fabric_structures/90_tensile_cc.jpg"}
 
-        this.isSet = function(checkTab) {
-          return this.tab === checkTab;
-        };
+  //   },          
+  //   {
+  //     name: 'Graphics',
+  //     size: {width: 25, height: 25},
+  //     link: 'graphics-awnings',      
+  //     images: {thumbnail: "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
+  //   },
+  //   {
+  //     name: 'Residential',
+  //     size: {width: 25, height: 25},
+  //     link: 'residential-awnings',      
+  //     images: {thumbnail: "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
+  //   },    
+  //   {
+  //     name: 'Valances',
+  //     size: {width: 25, height: 25},
+  //     link: 'valances-awnings',
+  //     images:{thumbnail:"img/custom_products/full_custom_3.jpg"}
+  //   }]
+  // ];
 
-        this.setTab = function(activeTab) {
-          this.tab = activeTab;
-        };
-      },
-      controllerAs: "tab"
-    };
-  });
+  // var curtains = [
+  //   [{
+  //     name: 'Enclosures', 
+  //     size: {width: 25, height: 25},
+  //     link: 'enclosures-curtains',     
+  //     images: {thumbnail: "img/awnings_canopies/60_index_awning.jpg"}
+  //   },
+  //   {
+  //     name: 'Sun Screens',
+  //     size: {width: 25, height: 25},
+  //     link: 'sun-screens-curtains',
+  //     images:{thumbnail:"img/custom_products/full_custom_3.jpg"}
+  //   }]
+  // ];
 
-  app.directive("navigationBarLight", function() {
-    return {
-      restrict: "E",
-      templateUrl: "./templates/navigation-bar-light.html",
-      controller: function() {
-        this.tab = "front-page-content";
+  // var fabrics = [
+  //   [{
+  //     name: 'Natural', 
+  //     size: {width: 25, height: 25},
+  //     link: 'natural-fabrics',     
+  //     images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
+  //   },
+  //   {
+  //     name: 'Synthetic',
+  //     size: {width: 25, height: 25},      
+  //     link: 'synthetic-fabrics',
+  //     images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
+  //   }]
+  // ]; 
 
-        this.isSet = function(checkTab) {
-          return this.tab === checkTab;
-        };
+  // var fabricStructures = [
+  //   [{
+  //     name: 'Frame Supported', 
+  //     size: {width: 25, height: 25},
+  //     link: 'frame-supported-fabric-structures',
+  //     images: {thumbnail: "img/awnings_canopies/60_index_awning.jpg"}
+  //   },
+  //   {
+  //     name: 'Shade Sails',
+  //     size: {width: 25, height: 25},      
+  //     link: 'shade-sails-fabric-structures',
+  //     images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
+  //   }],      
+  //   [{
+  //     name: 'Tensile',
+  //     size: {width: 25, height: 25},
+  //     link: 'tensile-fabric-structures',
+  //     images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
+  //   },         
+  //   {
+  //     name: 'Deployable',
+  //     size: {width: 25, height: 25},
+  //     link: 'deployable-fabric-structures',
+  //     images:{thumbnail:"img/custom_products/full_custom_3.jpg"}
+  //   }]
+  // ];    
 
-        this.setTab = function(activeTab) {
-          this.tab = activeTab;
-        };
-      },
-      controllerAs: "tab"
-    };
-  });
+  // var verticalRollers = [
+  //   [{
+  //     name: 'Vertical Rollers', 
+  //     size: {width: 25, height: 25},
+  //     link: 'vertical-roller-screens',     
+  //     images: {thumbnail: "img/awnings_canopies/60_index_awning.jpg"}
+  //   }]
+  // ];
 
-  var products = [
-    [{
-      name: 'Awnings & Canopies', 
-      size: {width: 25, height: 25},
-      link: 'awnings-and-canopies',     
-      images: {thumbnail: "img/awnings_canopies/60_index_awning.jpg"}
-    },
-    {
-      name: 'Curtains & Screens',
-      size: {width: 25, height: 25},      
-      link: 'curtains-and-screens',
-      images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
-    },      
-    {
-      name: 'Fabrics',
-      size: {width: 25, height: 25},
-      link: 'fabrics',
-      images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
-    }],
-    [{
-      name: 'Fabric Structures',
-      size: {width: 25, height: 25},
-      link: 'fabric-structures',
-      images: {thumbnail: "img/fabric_structures/90_tensile_cc.jpg"}
-
-    },          
-    {
-      name: 'Vertical Roller Screens',
-      size: {width: 25, height: 25},
-      link: 'vertical-roller-screens',      
-      images: {thumbnail: "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
-    },
-    {
-      name: 'Custom Products',
-      size: {width: 25, height: 25},
-      link: 'custom-products',
-      images:{thumbnail:"img/custom_products/full_custom_3.jpg"}
-    }]
-  ]; 
-
-  var awnings = [
-    [{
-      name: 'Commercial', 
-      size: {width: 25, height: 25},
-      link: 'commercial-awnings',
-      images: {thumbnail: "img/awnings_canopies/60_index_awning.jpg"}
-    },
-    {
-      name: 'Deployable',
-      size: {width: 25, height: 25},      
-      link: 'deployable-awnings',
-      images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
-    },      
-    {
-      name: 'Designs',
-      size: {width: 25, height: 25},
-      link: 'designs-awnings',
-      images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
-    }],
-    [{
-      name: 'Fabrics',
-      size: {width: 25, height: 25},
-      link: 'fabrics-awnings',
-      images: {thumbnail: "img/fabric_structures/90_tensile_cc.jpg"}
-
-    },          
-    {
-      name: 'Graphics',
-      size: {width: 25, height: 25},
-      link: 'graphics-awnings',      
-      images: {thumbnail: "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
-    },
-    {
-      name: 'Residential',
-      size: {width: 25, height: 25},
-      link: 'residential-awnings',      
-      images: {thumbnail: "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
-    },    
-    {
-      name: 'Valances',
-      size: {width: 25, height: 25},
-      link: 'valances-awnings',
-      images:{thumbnail:"img/custom_products/full_custom_3.jpg"}
-    }]
-  ];
-
-  var curtains = [
-    [{
-      name: 'Enclosures', 
-      size: {width: 25, height: 25},
-      link: 'enclosures-curtains',     
-      images: {thumbnail: "img/awnings_canopies/60_index_awning.jpg"}
-    },
-    {
-      name: 'Sun Screens',
-      size: {width: 25, height: 25},
-      link: 'sun-screens-curtains',
-      images:{thumbnail:"img/custom_products/full_custom_3.jpg"}
-    }]
-  ];
-
-  var fabrics = [
-    [{
-      name: 'Natural', 
-      size: {width: 25, height: 25},
-      link: 'natural-fabrics',     
-      images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
-    },
-    {
-      name: 'Synthetic',
-      size: {width: 25, height: 25},      
-      link: 'synthetic-fabrics',
-      images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
-    }]
-  ]; 
-
-  var fabricStructures = [
-    [{
-      name: 'Frame Supported', 
-      size: {width: 25, height: 25},
-      link: 'frame-supported-fabric-structures',
-      images: {thumbnail: "img/awnings_canopies/60_index_awning.jpg"}
-    },
-    {
-      name: 'Shade Sails',
-      size: {width: 25, height: 25},      
-      link: 'shade-sails-fabric-structures',
-      images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
-    }],      
-    [{
-      name: 'Tensile',
-      size: {width: 25, height: 25},
-      link: 'tensile-fabric-structures',
-      images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
-    },         
-    {
-      name: 'Deployable',
-      size: {width: 25, height: 25},
-      link: 'deployable-fabric-structures',
-      images:{thumbnail:"img/custom_products/full_custom_3.jpg"}
-    }]
-  ];    
-
-  var verticalRollers = [
-    [{
-      name: 'Vertical Rollers', 
-      size: {width: 25, height: 25},
-      link: 'vertical-roller-screens',     
-      images: {thumbnail: "img/awnings_canopies/60_index_awning.jpg"}
-    }]
-  ];
-
-  var customProducts = [
-    [{
-      name: 'Agricultural', 
-      size: {width: 25, height: 25},
-      link: 'agricultural-custom',     
-      images: {thumbnail: "img/awnings_canopies/60_index_awning.jpg"}
-    },
-    {
-      name: 'Fabrics',
-      size: {width: 25, height: 25},      
-      link: 'fabrics-custom',
-      images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
-    },      
-    {
-      name: 'Recreational',
-      size: {width: 25, height: 25},
-      link: 'recreational-custom',
-      images:{thumbnail:"img/custom_products/full_custom_3.jpg"}
-    }]
-  ];       
+  // var customProducts = [
+  //   [{
+  //     name: 'Agricultural', 
+  //     size: {width: 25, height: 25},
+  //     link: 'agricultural-custom',     
+  //     images: {thumbnail: "img/awnings_canopies/60_index_awning.jpg"}
+  //   },
+  //   {
+  //     name: 'Fabrics',
+  //     size: {width: 25, height: 25},      
+  //     link: 'fabrics-custom',
+  //     images: {thumbnail: "img/fabrics/60_index_fabric.jpg"}
+  //   },      
+  //   {
+  //     name: 'Recreational',
+  //     size: {width: 25, height: 25},
+  //     link: 'recreational-custom',
+  //     images:{thumbnail:"img/custom_products/full_custom_3.jpg"}
+  //   }]
+  // ];       
 })();

@@ -1,0 +1,20 @@
+[
+    [{
+      "name": "Agricultural", 
+      "size": {"width": 25, "height": 25},
+      "link": "agricultural-custom",     
+      "images": {"thumbnail": "img/awnings_canopies/60_index_awning.jpg"}
+    },
+    {
+      "name": "Fabrics",
+      "size": {"width": 25, "height": 25},      
+      "link": "fabrics-custom",
+      "images": {"thumbnail": "img/fabrics/60_index_fabric.jpg"}
+    },      
+    {
+      "name": "Recreational",
+      "size": {"width": 25, "height": 25},
+      "link": "recreational-custom",
+      "images":{"thumbnail":"img/custom_products/full_custom_3.jpg"}
+    }]
+] 

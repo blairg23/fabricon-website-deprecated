@@ -2,42 +2,60 @@
 
 <html lang="en" ng-app="fabricon">
 	<head>
+		<!-- Meta tags -->
+		<meta charset="utf-8">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		
-		<title>Fabricon - Fabric Contractors</title>
-		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />	
-		<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
-		<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
-		<link rel="stylesheet" type="text/css" href="css/fabricon.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Fabric Contractors">
+		<meta name="author" content="Blair Gemmer, Fabricon">
 
-		<script type="text/javascript" src="./js/libs/jquery-1.11.1.min.js"></script>
+		<title>Fabricon - Fabric Contractors</title>
+
+		<!-- CSS Styles -->
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+		<!-- Normalizes all HTML 5 elements across browsers -->
+		<link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="./css/fabricon.css" />
+
+		<!-- JavaScript -->
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script type="text/javascript" src="./js/libs/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="./js/libs/angular.min.js"></script>
-		<script type="text/javascript" src="./js/libs/bootstrap.min.js"></script>
 		<script type="text/javascript" src="./js/libs/jquery.lightbox.js"></script>
-		<script src="./bower_components/slick-carousel/slick/slick.js"></script>
-		<script src="./bower_components/angular-slick/dist/slick.js"></script>	
+		<!-- Angular -->
+		<script type="text/javascript" src="./js/libs/angular.min.js"></script>
+		<script type="text/javascript" src="./js/libs/angular-route.min.js"></script>
+		<!-- Fabricon-Specific JavaScript-->
 		<script type="text/javascript" src="./js/fabricon.js"></script>
+		<script type="text/javascript" src="./js/fabricon.controllers.js"></script>
 		<script type="text/javascript" src="./js/fabricon.ui.js"></script>
+		<!-- Twitter Bootstrap -->
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
 	</head>
 
-	<body>
-	    <!--  Navigation Container  -->
-	    <navigation-bar></navigation-bar>
+	<body role="document">
+    	<!--  Navigation Container  -->
+    	<navigation-bar></navigation-bar>
 
-		<div class="container">
+    	<!-- Main Content -->
+		<div class="container" role="main">
+	    	<!-- Content Pages -->
+	    	<!-- <content-pages></content-pages> -->
 			<!-- Front Page -->
-			<front-page-content ng-show="tab.isSet('front-page-content')"></front-page-content>
-		</div>
-		<!-- Footer Site Map -->
-		<site-map></site-map>
+			<!-- <front-page-content ng-show="tab.isSet('front-page-content')"></front-page-content> -->
+			<div ng-view></div>
+			<!-- Footer Site Map -->
+			<site-map></site-map>
 
-		<div class="container">
 			<footer>
 				<!-- <h1><a href="index.html">view1</a> | <a href="view2.html">view2</a> | <a href="view3.html">view3</a></h1> <br /> -->
-				<h6 class="centered nolinks">Copyright © <script>document.write(new Date().getFullYear());</script> Fabricon, LLC. All Rights Reserved | <address>806 West Spruce, Missoula, MT 59801</address> | <a href="tel:+14067288300">(406) 728-8300</a> | <a href="mailto:fabricon@montana.com">fabricon@montana.com</a> | Designed by <a href="http://blairgemmer.com">Blair Gemmer</a></h6>
+				<h6 class="centered nolinks">Copyright © <script>document.write(new Date().getFullYear());</script> Fabricon, LLC. All Rights Reserved <address>1021 Ronan Street, Missoula, MT. 59801</address> <a href="tel:+14067288300">(406) 728-8300</a> | <a href="mailto:fabricon@montana.com">fabricon@montana.com</a> | Designed by <a href="http://blairgemmer.com">Blair Gemmer</a></h6>
 			</footer>		
 		</div>
 	</body>

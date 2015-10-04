@@ -1,24 +1,28 @@
+/* Body */
+/*body{
+	padding-top:5px;
+}*/
 /*Centering Stuff*/
-.centered {
+/*.centered {
 	position: relative;
 	left: 50%;
 	right: 50%;
 	transform: translate(-50%, 0);
-}
+}*/
 
-.fixed_centered {
+/*.fixed_centered {
 	width:100%;
 	position: fixed;
 	top:0px;
 	left: 50%;
 	right: 50%;
-	background-color: #eee;
+	background-color: #000;
 	transform: translate(-50%, 0);
 	z-index: 1;
-}
+}*/
 
 /*Container Stuff*/
-.container {
+/*.container {
   margin-right: auto;
   margin-left: auto;
   *zoom: 1;
@@ -28,7 +32,7 @@
   padding-right: 0em;
   padding-left: 0em;
   *zoom: 1;
-}
+}*/
 
 /*Navigation Menu Bar and Brand*/
 /*.navbar-brand .centered {
@@ -38,7 +42,7 @@
 	transform: translate(-50%, 0);
 }*/
 
-.navbar-nav{
+/*.navbar-nav{
     float:none;
     left: 50%;
 	right: 50%;
@@ -47,142 +51,195 @@
     display: table;
     table-layout: fixed;
     width: 80%;
-}
+    background-color: #eee;
+}*/
 
-.nav {
+/*.nav {
   margin-bottom: 20px;
-  /*margin-left: 0;*/
   float: right;
   list-style: none;
-}
+}*/
 
-.navbar-nav.li {
+/*.navbar-nav.li {
 	display: inline;
-}
-.navbar .nav{
+}*/
+
+/*.navbar .nav{
   position: relative;
   float:none;
   display:inline-block;
-  /**display:inline; /* ie7 fix */
-  /**zoom:1;  hasLayout ie7 trigger */
   vertical-align: top;
   margin: 0 auto;
+}*/
+
+/*.navbar-inner .navbar.center {
+  text-align:center;
+}*/
+/*.fabricon-navbar-motto{
+	float:left;
+	height:25%; 
+	width:25%;
 }
 
-.navbar-inner .navbar.center {
-  text-align:center;
+.fabricon-navbar-buttons{
+	float:left;
+	background-color: black;
+	color: black;
 }
+
+.fabricon-navbar-buttons:select{
+	background-color:black;
+}
+
+.fabricon-navbar-buttons, .fabricon-navbar-button, ul.dropdown-menu, li{
+	text-decoration: none;
+	color: #AB9A07;	
+	background-color: black;
+}
+
+.fabricon-navbar-button li.active{
+	text-decoration: none;
+	color: #AB9A07;	
+	background-color: black;
+}
+
+li.divider.fabricon-divider{
+	background-color: #AB9A07;
+}*/
+
+/* Brand and Motto Area */
+.fabricon-brand-motto{
+	float:left;
+	left:0;
+	right:0;
+}
+.fabricon-brand{
+	float:left;
+	height:20%; 
+	width:20%;
+}
+.fabricon-motto{
+	padding-top: .5em;
+	float:left;
+	height:50%;
+	width:50%;
+}
+
+.fabricon-column {
+/*	position: relative;
+	float: left;
+*/
+/*	padding-left: 5px;
+	padding-right: 5px;*/
+}
+
+.made-in-montana-logo{
+	float:none;
+	height:10%;
+	width:10%;
+	padding-left:1em;	
+}
+
+/*@media (min-width: 768px) {
+	.made-in-montana-logo{
+		max-height: 2em;
+		max-width: 3em;
+	}
+}
+
+@media (min-width: 992px) {
+	  .made-in-montana-logo{
+		max-height: 3em;
+		max-width: 4em;
+	}  
+}
+
+@media (min-width: 1200px) {
+	.made-in-montana-logo{
+		max-height: 6em;
+		max-width: 7em;
+	}  
+}*/
 
 .navbar-header{
-	margin-top: 5em;
-	position: relative;
-	background-color: black;
-	width: 100%;
-	height: 3%;	
+	right:50%;
+	left:50%;
+	padding-left: 1em;
+}
+/*.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
 }
 
-.navbar-button {
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+*/
+/*.fabricon-navbar-header{
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	position: fixed;
+	background-color: black;
+	width: 100%;
+}*/
+
+/*.fabricon-navbar-button {
 	float: none;
 	display: inline;
   	text-align:center;
 	font-size: 1.5em;
 	margin-left: 2%;
 	margin-right: 2%;
+	background-color: #eee;
 }
 
 .row {
 margin-left: 0px;
-}
+}*/
 
-/*For making the link decorations not show up*/
-.nolinks a{
+
+/*.nolinks a{
 	text-decoration: none;
 	color: #000;
-}
+}*/
 
-.nolinks h3:hover {
+/*.nolinks h3:hover {
 	text-decoration: none;
 	color: #337;
 }
-
+*/
 /*Footer Stuff*/
 footer {
-	/*position: relative;	*/
 	text-align: center;
 	float:none;
-	/*display: inline;*/
 }
-/*.nolinks a:hover{
-	text-decoration: none;
-	background-color: #ccc;
-}*/
 
 /*For our product headers*/
 h3 {
 	text-align: center;
 }
 
+/*For making the link decorations not show up*/
 h3 a:active, a:visited, a:link {
 	text-decoration: none;
 	color: #000;
 }
 
-/*.nolinks h3:hover{
-	text-decoration: none;
-	background-color: #ccc;
-}*/
-
 .nolinks img{
 	text-decoration: none;
 	color: #000;
-}
-
-/*.nolinks img:hover{
-	text-decoration: none;
-	background-color: #ccc;
-}*/
-
-/*.navigation-gallery {
-	padding: 0.5em;
-}
-*/
-
-
-/*Slick Carousel Stuff*/
-.slick-prev, .slick-next { position: absolute; display: block; height: 20px; width: 20px; line-height: 0; font-size: 0; cursor: pointer; background: transparent; color: transparent; top: 50%; margin-top: -10px; padding: 0; border: white; outline: none; }
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus { outline: none; background: transparent; color: transparent; }
-
-.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before { opacity: 1.0; }
-
-.slick-prev:before, .slick-next:before {	
-	/*color: white !important;*/
-	color: transparent !important;
-    /*color:#332E29 !important;*/
-}
-
-.slick-prev, .slick-next {
-	height: 40px;
-	width: 40px; 
-}
-.slick-prev:before, .slick-next:before { font-family: "slick"; font-size: 40px; line-height: 1; color: white; opacity: 1.0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-
-.slick-prev { left: 7%; }
-.slick-next { right: 7%; }
-
-[dir="rtl"] .slick-prev { left: auto; right: -25px; }
-/*.slick-prev:before { content: "←"; }*/
-[dir="rtl"] .slick-prev:before { content: "→"; }
-
-[dir="rtl"] .slick-next { left: -25px; right: auto; }
-.slick-next:before { content: "→"; }
-/*[dir="rtl"] .slick-next:before { content: "←"; }*/
-
-.slick-prev:before {
-	background-image: url('./images/previous.png');
-	background-repeat: no-repeat;
-}
-
-.slick-next:before {
-	background-image: url('./images/next.png');
-	background-repeat: no-repeat;
 }

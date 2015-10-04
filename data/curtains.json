@@ -1,0 +1,14 @@
+[
+    [{
+      "name": "Enclosures", 
+      "size": {"width": 25, "height": 25},
+      "link": "enclosures-curtains",     
+      "images": {"thumbnail": "img/awnings_canopies/60_index_awning.jpg"}
+    },
+    {
+      "name": "Sun Screens",
+      "size": {"width": 25, "height": 25},
+      "link": "sun-screens-curtains",
+      "images":{"thumbnail":"img/custom_products/full_custom_3.jpg"}
+    }]
+]

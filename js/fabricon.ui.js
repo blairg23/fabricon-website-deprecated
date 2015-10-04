@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('.gallery-slider').slick();
+	// $('.gallery-slider').slick();
 
 	//Convert address tags to google map links - Michael Jasper 2012
 	$('address').each(function () {
