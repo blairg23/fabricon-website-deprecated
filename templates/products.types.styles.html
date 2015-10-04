@@ -1,0 +1,119 @@
+<div id="gallery-carousel-container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <carousel id="gallery-carousel" ng-cloak>
+        <slide ng-repeat="full_sized_image in main_gallery.images.full.images">
+          <img class='gallery-carousel-slide-img' ng-src="{{full_sized_image['image_folder_path'] + '/full/' + full_sized_image['name']}}" style="height:{{main_gallery.images.full.size.height}}%; width: 75%;"/>
+        </slide>
+      </carousel>  
+    </div>
+  </div>
+</div>
+
+<div id="navigator-container" class="container-fluid" ng-cloak>
+  <div id="navigator-sifter-container">
+    <div id="navigator-header" class="page-header">
+      <h1>Products</h1>
+    </div>
+    <div id="sifter-container">  
+      <div id="sifter-filter-container">
+        <div class="dropdown sifter-filter">
+          <button id="sifter-type-button" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <b>Type</b>
+            <span class="caret"></span>
+          </button>
+          <ul id="sifter-type-container-dropdown" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          </ul>
+        </div>
+        <div class="dropdown sifter-filter">
+          <button id="sifter-style-button" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" disabled>
+            <b>Style</b
+>            <span class="caret"></span>
+          </button>
+          <ul id="sifter-style-container-dropdown" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          </ul>
+        </div>
+      </div>
+      <div id="sifter-traits-container" class="dropdown">
+        <button id="sifter-traits-button" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" disabled>
+          <b>Traits</b>
+          <span class="caret"></span>
+        </button>
+        <ul id="sifter-traits-container-dropdown" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 1</a></li>
+          <li><a href="" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 2</a></li>
+          <li><a href="" class="small" data-value="option3" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 3</a></li>
+          <li><a href="" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 4</a></li>
+          <li><a href="" class="small" data-value="option5" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 5</a></li>
+          <li><a href="" class="small" data-value="option6" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 6</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row snippet-row vdivide" ng-repeat="row in tiles">
+    <hr>
+    <div class="col-xl-4 col-md-4 col-sm-12 col-xs-12 container-fluid snippet-container" ng-repeat="tile in row">
+      <div class='row'>
+        <div class='col-md-12 col-sm-12 col-xs-12'>
+          <div class='snippet-title-container'>
+            <a class="nolinks" href="" ui-sref="products.type({type: tile.type})" >
+              <h3>{{tile.name}}</h3>  
+            </a>
+          </div>
+          <div class='snippet-carousel-container '>
+            <carousel class='snippet-carousel ' style="height:{{tile.images.thumbnail.size.height}}%; width: 100%;">
+              <slide class='snippet-carousel-slide' ng-repeat="thumbnail_name in tile.images.thumbnail.images">
+                <a class="nolinks" href="" ui-sref="products.type({type: tile.type})" >
+                  <img class='center-block snippet-carousel-slide-img' ng-src="{{tile.image_folder_path + '/thumbnail/' + thumbnail_name}}" />
+                </a>
+              </slide>
+            </carousel>
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class='snippet-tagline-container'>
+            <h3 class=''>Lorem Ipsum</h3>
+          </div>
+          <div class='snippet-body-container'>
+            Sit purto impetus urbanitas ea. At inani labores eam, ea dissentias temporibus pro. Diceret sensibus pro ut, duo illum admodum inimicus in, ius diam necessitatibus ne. Quod nusquam sed eu, ius eu putent dictas, populo postulant dignissim an usu.
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <!--
+  <div class="row snippet-row vdivide" ng-repeat="row_categories in categories">
+    <hr>
+    <div class="col-xl-4 col-md-4 col-sm-12 col-xs-12 container-fluid snippet-container" ng-repeat="category in row_categories">
+      <div class='row'>
+        <div class='col-md-12 col-sm-12 col-xs-12'>
+          <div class='snippet-title-container'>
+            <a class="nolinks" href="" ui-sref="products.type({type: category.link_name})" >
+              <h3>{{category.name}}</h3>  
+            </a>
+          </div>
+          <div class='snippet-carousel-container '>
+            <carousel class='snippet-carousel ' style="height:{{category.images.thumbnail.size.height}}%; width: 100%;">
+              <slide class='snippet-carousel-slide' ng-repeat="thumbnail_name in category.images.thumbnail.images">
+                <a class="nolinks" href="" ui-sref="products.type({type: category.link_name})" >
+                  <img class='center-block snippet-carousel-slide-img' ng-src="{{category.image_folder_path + '/thumbnail/' + thumbnail_name}}" />
+                </a>
+              </slide>
+            </carousel>
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class='snippet-tagline-container'>
+            <h3 class=''>Lorem Ipsum</h3>
+          </div>
+          <div class='snippet-body-container'>
+            Sit purto impetus urbanitas ea. At inani labores eam, ea dissentias temporibus pro. Diceret sensibus pro ut, duo illum admodum inimicus in, ius diam necessitatibus ne. Quod nusquam sed eu, ius eu putent dictas, populo postulant dignissim an usu.
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  -->
+</div>

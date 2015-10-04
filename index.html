@@ -2,26 +2,27 @@
 
 <html lang="en" ng-app="fabricon">
 	<head>
-		<!-- Meta tags -->
-		<meta charset="utf-8">
+		<title>Fabricon - Fabric Contractors</title>
+		<meta name="author" content="Blair Gemmer and Evin Özer, Fabricon">
+		<meta name="keywords" content="fabricon, fabric, construction,  consulation, contract,tensile, awnings, canopies, curtains, fabric structures, screens, tents, tipis, missoula, montana, missoula montana, fabricon missoula montana, mark welander, mark, welander, evin ozer, ozer, evin özer, özer" />
+        <meta name="description" content="Missoula's legendary fabric consultants, contractors, and constructionists." />
+        <meta name="resource-type" content="document" />
+        <meta name="robots" content="index, follow" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Fabric Contractors">
-		<meta name="author" content="Blair Gemmer and Evin Özer, Fabricon">
 
-		<title>Fabricon - Fabric Contractors</title>
 		<link rel="SHORTCUT ICON" href="./img/logos/mt_logo_transparent_favicon.png">
 
-		<!-- CSS Styles -->
+		<!-- Third Party CSS -->
 		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
-		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<!-- XL resolution support for BootStrap grid. -->
 		<link rel="stylesheet" type="text/css" href="css/col_xl.css" />
-
 		<!-- Normalizes all HTML 5 elements across browsers -->
 		<link rel="stylesheet" type="text/css" href="./css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="./css/fabricon.css" />
+		<!-- / Third Party CSS -->
 
 		<!-- JavaScript -->
 		<!-- jQuery -->
@@ -31,29 +32,39 @@
 		<!-- Angular -->
 		<script type="text/javascript" src="./js/libs/angular.min.js"></script>
 		<script type="text/javascript" src="./js/libs/angular-route.min.js"></script>
-		<!-- Fabricon-Specific JavaScript-->
+		
+		<!-- Application -->
 		<script type="text/javascript" src="./js/fabricon.js"></script>
 		<script type="text/javascript" src="./js/fabricon.controllers.js"></script>
 		<script type="text/javascript" src="./js/fabricon.ui.js"></script>
+		<!-- / Application -->
+
+		<link rel="stylesheet" type="text/css" href="./css/fabricon.css" />
+
 		<!-- Twitter Bootstrap -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
+
+    	<script src="./js/libs/angular-ui-router/angular-ui-router.min.js"></script>
+
+    	<script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-66634589-1', 'auto');
+            ga('send', 'pageview');
+        </script>
 	</head>
 
-	<body role="document">
-    	<!--  Navigation Container  -->
+	<body role="document" ng-cloak>
     	<navigation-bar></navigation-bar>
-
-    	<!-- Main Content -->
-		<div class="parent-content" role="main">
-			<!-- Front Page -->
-			<div class="page-content" ng-view></div>
-			<!-- Footer Site Map -->
+		<div id="master-content" role="main">
+			<div class="content-container" ui-view="content"></div>
 			<site-map></site-map>	
 		</div>
-
 		<footer>
-			<!-- <h1><a href="index.html">view1</a> | <a href="view2.html">view2</a> | <a href="view3.html">view3</a></h1> <br /> -->
 			<h6 class="centered nolinks">Copyright © <script>document.write(new Date().getFullYear());</script> Fabricon, LLC. All Rights Reserved <address>1021 Ronan Street, Missoula, MT. 59801</address> <a href="tel:+14067288300">(406) 728-8300</a> | <a href="mailto:fabricon@montana.com">fabricon@montana.com</a> | Designed by <a href="http://www.evinozer.com">Evin Özer</a> and <a href="http://blairgemmer.com">Blair Gemmer</a></h6>
 		</footer>	
 	</body>

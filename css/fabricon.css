@@ -20,9 +20,11 @@
 /** - OVERRIDES */
 
 body {
-    background-image: url('../img/backgrounds/canvas.jpg');
+    background-image: url('../img/backgrounds/seamless_blue_hd.jpg');
     padding: 0%;
     margin: 0%;
+    height: 100%;
+    width: 100%;
     background-color: rgba(255, 255, 255, 1.0);
     overflow-x: hidden;
 }
@@ -33,7 +35,19 @@ footer {
     text-align: center;
     width: 100%;
     height: 10%;
-    background-color: rgba(255, 255, 255, 0.0);
+    background-color: rgba(255, 255, 255, 1.0);
+}
+
+footer a{
+    color: grey;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover{
+    color: white;
+    background-color: grey;    
+    text-decoration: none;
 }
 
 span {
@@ -65,6 +79,22 @@ h3 a:active, a:visited, a:link {
 nav {
     padding: 0%;
     margin: 0%;
+}
+
+#navbar-menu-items {
+    text-align: center;
+    width: 100%;
+}
+
+#navbar-menu-items > li {
+    text-align: center;
+    padding-left: 11.25%;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#navbar {
+    text-align: center;
 }
 
 .nolinks img {
@@ -124,21 +154,23 @@ nav {
     left:0;
     right:0;
 }
-.fabricon-brand{
+.fabricon-brand {
     float:left;
+    padding-top: 1.5em;
     height:20%; 
     width:20%;
 }
-.fabricon-motto{
-    /*padding-top: .5em;*/
+.fabricon-motto {
+    padding-top: 3.5em;
+    padding-left: 2em;
     float:left;
     height:50%;
-    width:50%;
+    width:60%;
 }
 .made-in-montana-logo{
     float:right;
-    height:7%;
-    width:7%;
+    height:4%;
+    width:4%;
     /*padding-left:1em; */
 }
 
@@ -154,22 +186,44 @@ nav {
 
 /** + CONTAINERS */
 
-#parent-content {
+#master-content {
     background-color: rgba(255, 255, 255, 0.0);
     width: 100%;
-    height: 90%;
+    height: 100%;
     margin: 0%;
     padding: 0%;
     border-radius: 15px;
     /*padding: 2%;*/
 }
 
-#page-content {
+.fabricon-page {
+    background-color: rgba(255, 255, 255, 1.0);
+    padding-left: 1%;
+    padding-right: 1%;
+    /*border-radius: 15px 15px 0px 0px;*/
+}
+
+.page-header {
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    background-color: rgba(255, 255, 255, 1.0);
+}
+
+.page-content {
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 0.5%;
+    background-color: rgba(255, 255, 255, 1.0);
+}
+
+.content-container {
     background-color: rgba(255, 255, 255, 0.0);
     width: 100%;
+    height: 100%;
     margin: 0%;
     padding: 0%;
-    border-radius: 15px;
+    /*border-radius: 15px;*/
 }
 
 /** - CONTAINERS */
@@ -195,22 +249,23 @@ nav {
 }
 
 
-.nav-social ul{
+.nav-social ul {
     list-style: none;
     float:right;   
     height: 10%; 
-    width: 20%;
+    width: 15%;
 }
 
-.nav-social li{
+.nav-social li {
     display: inline;
 }
 
-.nav-social .icons{
+.nav-social .icons {
     height: 25%;
     width: 25%;
     padding: 3%;
 }
+
 .icons .facebook{
     background-image: "./img/icons/facebook-solo.png"
 }
@@ -218,35 +273,98 @@ nav {
 
 /** + GALLERY */
 
-.gallery-carousel-container {
-    position: relative;
-    float: left;
+#gallery-carousel-container {
     width: 100%;
+    height: 100%;
 
     background-color: rgba(0, 0, 0, 1.0);
+    opacity: 0.8;
 }
 
-.gallery-carousel {
+#gallery-carousel-container:hover {
+    opacity: 1.0;
+}
+
+#gallery-carousel {
+    width: 100%;
+    height: 100%;
+    
     background-color: rgba(0, 0, 0, 0.0);
     border-radius: 30px;
 }
 
 .gallery-carousel-slide-img {
-    padding: 1%;
+    width: 100%;
+    height: 100%;
+
+    padding-top: 1%;
+    padding-bottom: 1%;
+    /*padding-left: 5%;*/
+    /*padding-right: 5%;*/
     border-radius: 30px;
+
+    display:block;
+    margin:auto;
 }
 
 /** - GALLERY */
 
 /** + NAVIGATOR */
 
-.navigator-container {
+#navigator-container {
     background-color: rgba(255, 255, 255, 1.0);
     border-radius: 15px;
     display: table;
     width: 90%;
+    opacity: 0.9;
 
     /*margin-top: 2%;*/
+}
+
+
+#navigator-container:hover {
+    opacity: 1.0;
+}
+
+
+#navigator-header {
+    padding-top: 0%;
+}
+
+#navigator-sifter-container {
+    float: left;
+    width: 100%;
+}
+
+#sifter-container {
+    float: left;
+    width: 100%;
+}
+
+#sifter-filter-container {
+    float: left;
+    width: 57%;
+
+    background-color: #B0E2FF;
+}
+
+.sifter-filter {
+    float: left;
+}
+
+.sifter-filter-combobox {
+    float: left;
+}
+
+#sifter-traits-container {
+    float: right;
+    width: 43%;
+
+    background-color: #D0FAEE;
+}
+
+#sifter-traits-container {
+    float: left;
 }
 
 .snippet-container {
@@ -257,6 +375,8 @@ nav {
     border-radius: 15px;
     /*margin-top: 2%;
     margin-bottom: 2%;*/
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .snippet-container:hover {
@@ -268,12 +388,12 @@ nav {
 }
 
 .snippet-title-container {
-    width: 60%;
+    width: 100%;
     height: 10%;
 }
 
 .snippet-carousel-container {
-    width: 60%;
+    width: 100%;
     height: 90%;
 }
 
@@ -282,10 +402,11 @@ nav {
     float: left;
     width: 100%;
     height: 100%;
+    padding-bottom: 1em;
    /* bottom: 0px;
     left: 0px;*/
     /*border: 2px solid #a1a1a1;*/
-    border-radius: 10px;
+    /*border-radius: 10px;*/
 }
 
 .snippet-carousel-slide-img {
@@ -293,13 +414,30 @@ nav {
 }
 
 .snippet-tagline-container {
-    width: 40%;
+    width: 100%;
     height: 10%;
 }
 
 .snippet-body-container {
-    width: 40%;
+    width: 100%;
     height: 90%;
 }
 
 /** - NAVIGATOR */
+
+/** + SITE MAP */
+.site-map{
+    /*display: inline; NOT WORKING FOR SOME REASON*/ 
+    background-color: #222;        
+}
+
+.site-map h2{
+    color: #9d9d9d; 
+}
+
+.site-map li{
+    color: #9d9d9d;
+    list-style: none;
+}
+
+/** - SITE MAP */
