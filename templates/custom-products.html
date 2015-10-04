@@ -1,0 +1,18 @@
+
+<!--  Product Container  -->
+<div class="products" ng-controller="StoreController as store">
+	<h2>Custom customProducts</h2>
+	<blockquote>{{product.description}}</blockquote>
+    
+    <div class="row" ng-repeat="customProducts in store.customProducts">
+		    <div class="col-md-4" ng-repeat="product in customProducts">
+            <!-- Image Gallery  -->
+        	<ul>
+          		<li class="small-image pull-left thumbnail" ng-class="{ active:tab.isSet({{product.link}}) }">
+          			<h3>{{product.name}}</h3><a href ng-click="tab.setTab(product.link)">
+          			<img ng-src="{{product.images.thumbnail}}" style="height:{{product.size.height}}em; width: {{product.size.width}}em" /></a>
+          		</li>
+          	</ul>
+        </div>
+    </div>
+</div>

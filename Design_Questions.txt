@@ -1,0 +1,11 @@
+1. Horizontal dividers between ALL menu items or only main categories?
+2. Custom-Products subcategories (or do you like what we have)?
+3. Map on contact us page?
+4. Gallery ideas? Don't forget to get HD photos to put in the placeholders!
+5. Content for "Resources" and "About Fabricon" pages.
+6. Color scheme / Styles / Font size / font family style / weight, etc.
+    a. Menu
+    b. Background
+    c. Logo / Logo Text
+    d. Image Thumbnails
+    e. Footer

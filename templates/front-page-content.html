@@ -1,0 +1,14 @@
+<!--  Product Container  -->
+<div class="products" ng-controller="StoreController as store">    
+    <div class="row" ng-repeat="products in store.products">
+		    <div class="col-md-4" ng-repeat="product in products">
+            <!-- Image Gallery  -->
+        	<ul>
+          		<li class="small-image pull-left thumbnail" ng-class="{ active:tab.isSet({{product.link}}) }">
+          			<h3>{{product.name}}</h3><a href ng-click="tab.setTab(product.link)">
+          			<img ng-src="{{product.images.thumbnail}}" style="height:{{product.size.height}}em; width: {{product.size.width}}em" /></a>
+          		</li>
+          	</ul>
+        </div>
+    </div>
+</div>

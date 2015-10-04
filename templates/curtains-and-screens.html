@@ -1,0 +1,25 @@
+<!--  custom
+ Container  -->
+<div class="products" ng-controller="StoreController as store">  
+	<h2>Curtains & Screens</h2>
+	<blockquote>{{custom
+.description}}</blockquote>  
+    <div class="row" ng-repeat="curtains in store.curtains">
+		    <div class="col-md-4" ng-repeat="custom
+ in curtains">
+            <!-- Image Gallery  -->
+        	<ul>
+          		<li class="small-image pull-left thumbnail" ng-class="{ active:tab.isSet({{custom
+.link}}) }">
+          			<h3>{{custom
+.name}}</h3><a href ng-click="tab.setTab(custom
+.link)">
+          			<img ng-src="{{custom
+.images.thumbnail}}" style="height:{{custom
+.size.height}}em; width: {{custom
+.size.width}}em" /></a>
+          		</li>
+          	</ul>
+        </div>
+    </div>
+</div>
