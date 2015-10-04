@@ -1,0 +1,87 @@
+[
+    [{
+      "name": "Commercial", 
+      "size": {"width": 100, "height": 100},
+      "link": "commercial",
+      "images":{
+      "thumbnails":[
+        {"image": "img/awnings_canopies/60_index_awning.jpg"},
+        {"image": "img/fabrics/60_index_fabric.jpg"},
+        {"image": "img/fabric_structures/90_tensile_cc.jpg"},
+        {"image": "img/custom_products/full_custom_3.jpg"},
+        {"image": "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
+      ]
+    }
+    },
+    {
+      "name": "Deployable",
+      "size": {"width": 100, "height": 100},      
+      "link": "deployable",
+      "images":{
+      "thumbnails":[
+        {"image": "img/awnings_canopies/60_index_awning.jpg"},
+        {"image": "img/fabrics/60_index_fabric.jpg"},
+        {"image": "img/fabric_structures/90_tensile_cc.jpg"},
+        {"image": "img/custom_products/full_custom_3.jpg"},
+        {"image": "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
+      ]
+    }
+    },      
+    {
+      "name": "Styles and Designs",
+      "size": {"width": 100, "height": 100},
+      "link": "designs",
+      "images":{
+      "thumbnails":[
+        {"image": "img/awnings_canopies/60_index_awning.jpg"},
+        {"image": "img/fabrics/60_index_fabric.jpg"},
+        {"image": "img/fabric_structures/90_tensile_cc.jpg"},
+        {"image": "img/custom_products/full_custom_3.jpg"},
+        {"image": "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
+      ]
+    }
+    }],
+    [{
+      "name": "Fabrics",
+      "size": {"width": 100, "height": 100},
+      "link": "fabrics",
+      "images":{
+      "thumbnails":[
+        {"image": "img/awnings_canopies/60_index_awning.jpg"},
+        {"image": "img/fabrics/60_index_fabric.jpg"},
+        {"image": "img/fabric_structures/90_tensile_cc.jpg"},
+        {"image": "img/custom_products/full_custom_3.jpg"},
+        {"image": "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
+      ]
+    }
+
+    },          
+    {
+      "name": "Graphics",
+      "size": {"width": 100, "height": 100},
+      "link": "graphics",      
+      "images":{
+      "thumbnails":[
+        {"image": "img/awnings_canopies/60_index_awning.jpg"},
+        {"image": "img/fabrics/60_index_fabric.jpg"},
+        {"image": "img/fabric_structures/90_tensile_cc.jpg"},
+        {"image": "img/custom_products/full_custom_3.jpg"},
+        {"image": "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
+      ]
+    }
+    },
+    {
+      "name": "Residential",
+      "size": {"width": 100, "height": 100},
+      "link": "residential",      
+      "images":{
+      "thumbnails":[
+        {"image": "img/awnings_canopies/60_index_awning.jpg"},
+        {"image": "img/fabrics/60_index_fabric.jpg"},
+        {"image": "img/fabric_structures/90_tensile_cc.jpg"},
+        {"image": "img/custom_products/full_custom_3.jpg"},
+        {"image": "img/vertical_roller_screens/full_awning_chinese_2.jpg"}
+      ]
+      }
+    }]
+  ]
