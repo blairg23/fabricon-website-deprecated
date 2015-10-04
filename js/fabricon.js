@@ -1,5 +1,9 @@
 (function () {
-	var app = angular.module('fabricon', ['slick']);
+	var app = angular.module('fabricon', [
+    // 'ngRoute',
+    // 'fabriconControllers'
+    'slick'
+  ]);
 	
   app.controller('StoreController', function(){
     this.products = products;

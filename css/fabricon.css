@@ -1,7 +1,4 @@
-h3 {
-	text-align: center;
-}
-
+/*Centering Stuff*/
 .centered {
 	position: relative;
 	left: 50%;
@@ -20,18 +17,32 @@ h3 {
 	z-index: 1;
 }
 
-.content_centered {
+/*Container Stuff*/
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+
+.container-fluid {
+  padding-right: 0em;
+  padding-left: 0em;
+  *zoom: 1;
+}
+
+/*Navigation Menu Bar and Brand*/
+/*.navbar-brand .centered {
 	position: relative;
 	left: 50%;
 	right: 50%;
 	transform: translate(-50%, 0);
-}
+}*/
 
 .navbar-nav{
     float:none;
     left: 50%;
 	right: 50%;
-	transform: translate(30%, 0);
+	transform: translate(20%, 0);
     margin: 0 auto;
     display: table;
     table-layout: fixed;
@@ -49,7 +60,7 @@ h3 {
 	display: inline;
 }
 .navbar .nav{
-  /*position: relative;*/
+  position: relative;
   float:none;
   display:inline-block;
   /**display:inline; /* ie7 fix */
@@ -77,13 +88,13 @@ h3 {
 	font-size: 1.5em;
 	margin-left: 2%;
 	margin-right: 2%;
-
 }
 
 .row {
 margin-left: 0px;
 }
 
+/*For making the link decorations not show up*/
 .nolinks a{
 	text-decoration: none;
 	color: #000;
@@ -94,12 +105,22 @@ margin-left: 0px;
 	color: #337;
 }
 
+/*Footer Stuff*/
+footer {
+	/*position: relative;	*/
+	text-align: center;
+	float:none;
+	/*display: inline;*/
+}
 /*.nolinks a:hover{
 	text-decoration: none;
 	background-color: #ccc;
 }*/
 
-
+/*For our product headers*/
+h3 {
+	text-align: center;
+}
 
 h3 a:active, a:visited, a:link {
 	text-decoration: none;
@@ -126,6 +147,8 @@ h3 a:active, a:visited, a:link {
 }
 */
 
+
+/*Slick Carousel Stuff*/
 .slick-prev, .slick-next { position: absolute; display: block; height: 20px; width: 20px; line-height: 0; font-size: 0; cursor: pointer; background: transparent; color: transparent; top: 50%; margin-top: -10px; padding: 0; border: white; outline: none; }
 .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus { outline: none; background: transparent; color: transparent; }
 

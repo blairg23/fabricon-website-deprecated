@@ -1,15 +1,17 @@
 	<!--  Navigation Container  -->
 	<nav class="navbar navbar-default" role="navigation" ng-show=true>
     	<div class="navbar-header">
-	    	<a class="navbar-brand" href="#">
+	    	<a class="navbar-brand" href ng-click="tab.setTab('front-page-content')">
 	        	<img class="centered" alt="Brand" src="img/logos/light_on_dark.jpg" style="height:35%; width:35%;" />
 	      	</a>
 	    </div>
 		<div class="container-fluid navbar-right">
-
 		    <div class="fixed_centered">
-			    <ul class="nav navbar-nav" style="vertical-align:middle">
-	                <li class='navbar-button' ng-class="{ active:tab.isSet('front-page-content') }">
+		    	<a href ng-click="tab.setTab('front-page-content')">
+			    	<img class="navbar-button" alt="Brand" src="img/logos/mt_logo_lg.png" style="height:5%; width:5%" />
+			    </a>
+			    <ul class="nav navbar-nav" style="vertical-align:middle">			
+	                <li class="navbar-button" ng-class="{ active:tab.isSet('front-page-content') }">
 	                	<a href ng-click="tab.setTab('front-page-content')">Home</a>
 	                </li>
 	        		<li class="navbar-button dropdown">
@@ -18,11 +20,17 @@
 			          		<li ng-class="{ active:tab.isSet('awnings-and-canopies') }" class="dropdown-submenu"><a href ng-click="tab.setTab('awnings-and-canopies')" class="dropdown-toggle" data-toggle="dropdown">Awnings & Canopies</a>
 		                    	<ul class="dropdown-menu">
 		                            <li ng-class="{ active:tab.isSet('commercial-awnings') }"><a href ng-click="tab.setTab('commercial-awnings')">Commercial</a></li>
+		                            <li class="divider"></li>
 		                            <li ng-class="{ active:tab.isSet('deployable-awnings') }"><a href ng-click="tab.setTab('deployable-awnings')">Deployable</a></li>
+		                            <li class="divider"></li>
 		                            <li ng-class="{ active:tab.isSet('designs-awnings') }"><a href ng-click="tab.setTab('designs-awnings')">Designs</a></li>
+		                            <li class="divider"></li>
 		                            <li ng-class="{ active:tab.isSet('fabrics-awnings') }"><a href ng-click="tab.setTab('fabrics-awnings')">Fabrics</a></li>
+		                            <li class="divider"></li>
 									<li ng-class="{ active:tab.isSet('graphics-awnings') }"><a href ng-click="tab.setTab('graphics-awnings')">Graphics</a></li>
+									<li class="divider"></li>
 		                            <li ng-class="{ active:tab.isSet('residential-awnings') }"><a href ng-click="tab.setTab('residential-awnings')">Residential</a></li>
+		                            <li class="divider"></li>
 		                            <li ng-class="{ active:tab.isSet('valances-awnings') }"><a href ng-click="tab.setTab('valances-awnings')">Valances</a></li>
 		                        </ul>
 	                   		</li>	
@@ -30,6 +38,7 @@
 		          			<li ng-class="{ active:tab.isSet('curtains-and-screens') }" class="dropdown-submenu"><a href ng-click="tab.setTab('curtains-and-screens')" class="dropdown-toggle" data-toggle="dropdown">Curtains & Screens</a>
 		                    	<ul class="dropdown-menu">
 		                            <li ng-class="{ active:tab.isSet('enclosures-curtains') }"><a href ng-click="tab.setTab('enclosures-curtains')">Enclosures</a></li>
+		                            <li class="divider"></li>
 		                            <li ng-class="{ active:tab.isSet('sun-screens-curtains') }"><a href ng-click="tab.setTab('sun-screens-curtains')">Sun Screens</a></li>
 		                        </ul>
 		            		</li>                   		
@@ -37,6 +46,7 @@
 		          			<li ng-class="{ active:tab.isSet('fabrics') }" class="dropdown-submenu"><a href ng-click="tab.setTab('fabrics')" class="dropdown-toggle" data-toggle="dropdown">Fabrics</a>
 		                    	<ul class="dropdown-menu">
 		                            <li ng-class="{ active:tab.isSet('natural-fabrics') }"><a href ng-click="tab.setTab('natural-fabrics')">Natural</a></li>
+		                            <li class="divider"></li>
 		                            <li ng-class="{ active:tab.isSet('synthetic-fabrics') }"><a href ng-click="tab.setTab('synthetic-fabrics')">Synthetic</a></li>
 		                        </ul>
 		            		</li>
@@ -44,12 +54,17 @@
 				            <li ng-class="{ active:tab.isSet('fabric-structures') }" class="dropdown-submenu"><a href ng-click="tab.setTab('fabric-structures')" class="dropdown-toggle" data-toggle="dropdown">Fabric Structures</a>                        
 		                        <ul class="dropdown-menu">
 		                            <li ng-class="{ active:tab.isSet('frame-supported-fabric-structures') }"><a href ng-click="tab.setTab('frame-supported-fabric-structures')">Frame Supported</a></li>
+		                            <li class="divider"></li>
 		                            <li ng-class="{ active:tab.isSet('shade-sails-fabric-structures') }"><a href ng-click="tab.setTab('shade-sails-fabric-structures')">Shade Sails</a></li>
+		                            <li class="divider"></li>
 		                            <li ng-class="{ active:tab.isSet('tensile-fabric-structures') }"><a href ng-click="tab.setTab('tensile-fabric-structures')">Tensile</a></li>
+		                            <li class="divider"></li>
 		                            <li ng-class="{ active:tab.isSet('deployable-fabric-structures') }" class="dropdown-submenu"><a href ng-click="tab.setTab('deployable-fabric-structures')" class="dropdown-toggle" data-toggle="dropdown">Deployable</a>
 		                            	<ul class="dropdown-menu">
 											<li ng-class="{ active:tab.isSet('tents-deployable') }"><a href ng-click="tab.setTab('tents-deployable')">Tents</a></li>
+											<li class="divider"></li>
 				            				<li ng-class="{ active:tab.isSet('tipis-deployable') }"><a href ng-click="tab.setTab('tipis-deployable')">Tipis</a></li>
+				            				<li class="divider"></li>
 				            				<li ng-class="{ active:tab.isSet('custom-deployable') }"><a href ng-click="tab.setTab('custom-deployable')">Custom</a></li>
 		                            	</ul>
 		                            </li>	                          
@@ -61,7 +76,9 @@
 		                    <li ng-class="{ active:tab.isSet('custom-products') }" class="dropdown-submenu"><a href ng-click="tab.setTab('custom-products')" class="dropdown-toggle" data-toggle="dropdown">Custom Products</a>
 		                        <ul class="dropdown-menu">
 		                            <li ng-class="{ active:tab.isSet('agricultural-custom') }"><a href ng-click="tab.setTab('agricultural-custom')">Agricultural</a></li>
+		                            <li class="divider"></li>
 		                            <li ng-class="{ active:tab.isSet('fabrics-custom') }"><a href ng-click="tab.setTab('fabrics-custom')">Fabrics</a></li>
+		                            <li class="divider"></li>
 		                            <li ng-class="{ active:tab.isSet('recreational-custom') }"><a href ng-click="tab.setTab('recreational-custom')">Recreational</a></li>
 		                        </ul>
 		                    </li>
@@ -69,7 +86,9 @@
 		                    <li ng-class="{ active:tab.isSet('consulting') }" class="dropdown-submenu"><a href ng-click="tab.setTab('consulting')" class="dropdown-toggle" data-toggle="dropdown">Consulting</a>
 		                        <ul class="dropdown-menu">
 		                            <li ng-class="{ active:tab.isSet('codes-consulting') }"><a href ng-click="tab.setTab('codes-consulting')">Codes</a></li>
+		                            <li class="divider"></li>
 		                            <li ng-class="{ active:tab.isSet('design-consulting') }"><a href ng-click="tab.setTab('design-consulting')">Design</a></li>
+		                            <li class="divider"></li>
 		                            <li ng-class="{ active:tab.isSet('engineering-consulting') }"><a href ng-click="tab.setTab('engineering-consulting')">Engineering</a></li>
 		                        </ul>
 		                    </li>      
